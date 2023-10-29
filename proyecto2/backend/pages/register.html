@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="register.js" defer></script>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            text-align: center;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .form-container input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .form-container button {
+            width: 100%;
+        }
+
+        .errorescondido {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <h1>Crear cuenta</h1>
+            <p>Registro de paciente.</p>
+            <form id="register">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                <label for="user">Nombre de usuario (Debe ser único)</label>
+                <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                <label for="sexo">Sexo</label>
+                <select name="sexo" id="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+                <button type="submit">Crear cuenta</button>
+            </form>
+            <p class="errorescondido">Error al iniciar sesión</p>
+            <p>¿Ya tiene una cuenta? - <a href="/">Iniciar sesión</a></p>
+        </div>
+    </main>
+</body>
+</html>
